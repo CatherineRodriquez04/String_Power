@@ -142,6 +142,27 @@ std::string patternChar(char character, int power, char character2, int power2){
     return result;
 }
 
+//creating a string od O(logN complexity)
+std::string create_string_using_power(int count, char fill = ' ') {
+    if (count <= 0)
+        return ""; // Return an empty string if count is non-positive
+
+    // Base case: If count is 1, return a string with a single character
+    if (count == 1)
+        return std::string(1, fill);
+
+    // Recursive case: Divide and conquer using exponentiation by squaring
+    if (count % 2 == 0) {
+        // If count is even, recursively call with half of count and square the string
+        std::string half_string = create_string_using_power(count / 2, fill);
+        return half_string + half_string; // Concatenate the half string with itself
+    } else {
+        // If count is odd, recursively call with (count - 1) and append one more character
+        std::string half_string = create_string_using_power((count - 1) / 2, fill);
+        return half_string + half_string + fill; // Concatenate the half string with itself and append one more character
+    }
+}
+
 int main(){
     int P; //variable used to store power number
     char character; //variable used to store letter
@@ -165,6 +186,13 @@ int main(){
     std::string stringPattern = patternChar(character, P, character2, P2); //calls function
 
     std::cout << "\nString Pattern: " << stringPattern << std::endl;
+
+    //creating a string of O(logN) complexity
+    int count = 10;
+    char fill_character = '*';
+    std::string result = create_string_using_power(count, fill_character);
+    std::cout << "String with " << count << " equal characters: " << result << std::endl;
+
 
     return 0;
 }
