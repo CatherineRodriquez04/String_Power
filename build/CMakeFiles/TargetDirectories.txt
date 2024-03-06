@@ -1,0 +1,3 @@
+C:/Users/cathe/OneDrive/Desktop/LSU Undergrad/Semester 4/CSC 3380/String_Power/build/CMakeFiles/string_power.dir
+C:/Users/cathe/OneDrive/Desktop/LSU Undergrad/Semester 4/CSC 3380/String_Power/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/cathe/OneDrive/Desktop/LSU Undergrad/Semester 4/CSC 3380/String_Power/build/CMakeFiles/ZERO_CHECK.dir

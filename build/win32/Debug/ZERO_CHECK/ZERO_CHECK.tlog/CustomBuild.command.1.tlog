@@ -1,0 +1,10 @@
+^C:\USERS\CATHE\ONEDRIVE\DESKTOP\LSU UNDERGRAD\SEMESTER 4\CSC 3380\STRING_POWER\BUILD\CMAKEFILES\B884D883DD684B3E02F45DD9FA07FF33\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/cathe/OneDrive/Desktop/LSU Undergrad/Semester 4/CSC 3380/String_Power" "-BC:/Users/cathe/OneDrive/Desktop/LSU Undergrad/Semester 4/CSC 3380/String_Power/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/cathe/OneDrive/Desktop/LSU Undergrad/Semester 4/CSC 3380/String_Power/build/spring2024-csc3380-lecture11.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
